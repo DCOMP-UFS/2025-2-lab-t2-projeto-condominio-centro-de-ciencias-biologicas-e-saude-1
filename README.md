@@ -140,7 +140,7 @@ Foram utilizadas **sete atas vigentes**, sendo seis pertencentes ao grupo e uma 
 
 - **Disciplina:** Laboratório de Redes de Computadores  
 - **Instituição:** Universidade Federal de Sergipe (UFS)  
-- **Ano:** 2026  
+- **Período:** 2025.2
 
 ---
 
