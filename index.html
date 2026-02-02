@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CCBS – Estruturação de Rede</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <span class="logo-text">CCBS | UFS</span>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#contexto">Projeto</a></li>
+          <li><a href="#arquitetura">Arquitetura</a></li>
+          <li><a href="#orcamento">Orçamento</a></li>
+          <li class="dropdown">
+            <span>Laboratórios ▾</span>
+            <ul class="dropdown-menu">
+              <li><a href="#">GPEPS</a></li>
+              <li><a href="#">Funcionalidade Humana</a></li>
+              <li><a href="#">GPAI/UFS</a></li>
+              <li><a href="#">Ensino e Serviço em Saúde</a></li>
+              <li><a href="#">Educação Científica</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="contexto" class="hero">
+    <div class="container hero-content">
+      <img src="assets/ccbs_png.png" alt="Logo CCBS" class="hero-logo" />
+      <div class="hero-text">
+        <h1>Projeto de Estruturação de Rede</h1>
+        <h2>Centro de Ciências Biológicas e da Saúde – UFS</h2>
+        <p>
+          Simulação de implantação de infraestrutura de rede seguindo edital,
+          levantamento de requisitos, orçamento detalhado e arquitetura lógica
+          para um centro acadêmico multiusuário.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARQUITETURA -->
+  <section id="arquitetura" class="section">
+  <div class="container">
+    <h2>Arquitetura da Rede</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Planta Física do CCBS</h3>
+        <p>Distribuição física dos laboratórios, racks e pontos de rede.</p>
+        <div class="image-placeholder"><img src="assets/planta do ccbs.jpg" alt="planta fisica" class="zoomable"></div>
+      </div>
+      <div class="card">
+        <h3>Mapa Lógico da Rede</h3>
+        <p>Segmentação lógica por sub-redes e organização dos laboratórios.</p>
+        <div class="image-placeholder"><img src="assets/mapa logico ccbs.jpeg" alt="mapa logico" class="zoomable"></div>
+      </div>
+      <div class="card">
+        <h3>Topologia Omada</h3>
+        <p>Gerenciamento centralizado via Omada Controller.</p>
+        <div class="image-placeholder"><img src="assets/planta ccbs no omada.jpeg" alt="planta omada" class="zoomable"></div>
+      </div>
+    </div>
+
+    <h3 class="mt">Endereçamento IP por Laboratório</h3>
+    <table class="table">
+      <thead>
+        <tr><th>Laboratório</th><th>Rede</th><th>Máscara</th><th>Hosts</th><th>Gateway</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>GPEPS</td><td>10.10.10.0/29</td><td>255.255.255.248</td><td>10.10.10.1 – 10.10.10.6</td><td>10.10.10.1</td></tr>
+        <tr><td>Ensino e Serviço em Saúde</td><td>10.10.20.0/29</td><td>255.255.255.248</td><td>10.10.20.1 – 10.10.20.6</td><td>10.10.20.6</td></tr>
+        <tr><td>Funcionalidade Humana</td><td>10.10.30.0/28</td><td>255.255.255.240</td><td>10.10.30.1 – 10.10.30.14</td><td>10.10.30.1</td></tr>
+        <tr><td>Educação Científica</td><td>10.10.40.0/29</td><td>255.255.255.248</td><td>10.10.40.1 – 10.10.40.6</td><td>10.10.40.1</td></tr>
+        <tr><td>GPAI/UFS</td><td>10.10.50.0/30</td><td>255.255.255.252</td><td>10.10.50.1 – 10.10.50.2</td><td>10.10.50.1</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+  <!-- ORÇAMENTO -->
+  <section id="orcamento" class="section light">
+  <div class="container">
+    <h2>Orçamento por Tipo de Equipamento</h2>
+    <table class="table">
+        <thead>
+            <tr>
+            <th>Equipamento</th>
+            <th>Qtd</th>
+            <th>Valor Unitário (R$)</th>
+            <th>Valor Total (R$)</th>
+            <th>Percentual (%)</th>
+            <th>ID da Ata</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Servidor TECZAP</td>
+            <td>1</td>
+            <td>79.990,00</td>
+            <td>79.990,00</td>
+            <td>32,01%</td>
+            <td>10673078000120-1-000139/2024</td>
+            </tr>
+            <tr>
+            <td>Switch Gerenciável</td>
+            <td>6</td>
+            <td>6.390,00</td>
+            <td>38.340,00</td>
+            <td>15,35%</td>
+            <td>01263896000164-1-000173/2025</td>
+            </tr>
+            <tr>
+            <td>Nobreak 1500VA</td>
+            <td>5</td>
+            <td>530,00</td>
+            <td>2.650,00</td>
+            <td>1,06%</td>
+            <td>32479123000143-1-000145/2025</td>
+            </tr>
+            <tr>
+            <td>Nobreak 600VA</td>
+            <td>1</td>
+            <td>320,00</td>
+            <td>320,00</td>
+            <td>0,13%</td>
+            <td>32479123000143-1-000145/2025</td>
+            </tr>
+            <tr>
+            <td>Access Point</td>
+            <td>5</td>
+            <td>1.698,99</td>
+            <td>8.494,95</td>
+            <td>3,40%</td>
+            <td>10735145000194-1-000240/2025</td>
+            </tr>
+            <tr>
+            <td>Cabo CAT6 (m)</td>
+            <td>400</td>
+            <td>2,40</td>
+            <td>960,00</td>
+            <td>0,38%</td>
+            <td>04892707000100-1-000453/2025</td>
+            </tr>
+            <tr>
+            <td>Ar Condicionado</td>
+            <td>4</td>
+            <td>9.998,00</td>
+            <td>39.992,00</td>
+            <td>16,00%</td>
+            <td>00497560000101-1-000203/2025</td>
+            </tr>
+            <tr>
+            <td>Desktop</td>
+            <td>17</td>
+            <td>4.619,85</td>
+            <td>78.537,45</td>
+            <td>31,43%</td>
+            <td>00348003000110-1-000454/2025</td>
+            </tr>
+            <tr>
+            <td>Injetor PoE</td>
+            <td>3</td>
+            <td>194,00</td>
+            <td>582,00</td>
+            <td>0,24%</td>
+            <td>45358058000140-1-000242/2025</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h3 class="mt">Orçamento por Laboratório</h3>
+    <div class="cards">
+      <div class="card"><h3>Recursos Compartilhados</h3><p>R$ 98.062,00 (39,25%)</p></div>
+      <div class="card"><h3>Funcionalidade Humana</h3><p>R$ 51.149,94 (20,50%)</p></div>
+      <div class="card"><h3>GPAI/UFS</h3><p>R$ 13.028,84 (5,21%)</p></div>
+      <div class="card"><h3>Ensino e Serviço em Saúde</h3><p>R$ 27.856,69 (11,15%)</p></div>
+      <div class="card"><h3>GPEPS</h3><p>R$ 17.858,69 (7,15%)</p></div>
+      <div class="card"><h3>Educação Científica</h3><p>R$ 41.910,24 (16,74%)</p></div>
+    </div>
+
+    <h3 class="mt">Divisão de Recursos por Quantidade de Pesquisas</h3>
+    <table class="table">
+      <thead>
+        <tr><th>Laboratório</th><th>Pesquisas</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Funcionalidade Humana</td><td>26</td></tr>
+        <tr><td>Educação Científica</td><td>21</td></tr>
+        <tr><td>Ensino e Serviço em Saúde</td><td>9</td></tr>
+        <tr><td>GPEPS</td><td>8</td></tr>
+        <tr><td>GPAI/UFS</td><td>4</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="mt">Atas de Registro de Preços Utilizadas</h3>
+    <div class="card">
+      <p>Foram utilizadas sete Atas Vigentes. Seis pertencem ao grupo, contemplando: servidor, nobreaks, access points, cabeamento, desktops, ar-condicionado e injetores PoE. A ata referente aos switches foi utilizada de forma compartilhada com outro grupo, conforme permitido pelo edital.</p>
+    </div>
+  </div>
+</section>
+
+  <section id="edital" class="section">
+    <div class="container">
+      <h2>Edital e Conformidade</h2>
+      <div class="cards">
+        <div class="card"><h3>Uso Multiusuário</h3><p>Infraestrutura projetada para compartilhamento entre múltiplos grupos de pesquisa.</p></div>
+        <div class="card"><h3>Limite Orçamentário</h3><p>Respeito ao teto financeiro e à distribuição máxima por grupo.</p></div>
+        <div class="card"><h3>Funções Definidas</h3><p>Equipe estruturada conforme papéis obrigatórios descritos no edital.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipe" class="section light">
+    <div class="container">
+      <h2>Equipe do Projeto</h2>
+      <div class="cards">
+        <div class="card"><h3>Gabriel Luiz S. G. Barreto</h3><p>Assistente de Atas de Registro de Compras</p></div>
+        <div class="card"><h3>João Felipe Quentino</h3><p>Coordenador do Projeto</p></div>
+        <div class="card"><h3>José Henrique S. Santana</h3><p>Contador / Tesoureiro</p></div>
+        <div class="card"><h3>Pablo Alves Freire</h3><p>Assistente de Coordenação</p></div>
+        <div class="card"><h3>Thiago Menezes Vasconcelos</h3><p>Assistente de Coordenação</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>Equipe CCBS – Laboratório de Redes de Computadores – UFS (2026)</p>
+    </div>
+  </footer>
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+<script>
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.querySelector(".close");
+
+  document.querySelectorAll(".zoomable").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+  modal.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>
+</body>
+</html>
