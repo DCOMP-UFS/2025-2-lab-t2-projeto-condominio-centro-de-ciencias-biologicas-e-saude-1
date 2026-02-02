@@ -229,3 +229,9 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+
+.chart-container {
+  max-width: 500px;
+  margin: 40px auto;
+}
+

@@ -25,14 +25,16 @@
           <li><a href="#contexto">Projeto</a></li>
           <li><a href="#arquitetura">Arquitetura</a></li>
           <li><a href="#orcamento">Orçamento</a></li>
+          <li><a href="#edital">Edital</a></li>
+          <li><a href="#equipe">Equipe</a></li>
           <li class="dropdown">
             <span>Laboratórios ▾</span>
             <ul class="dropdown-menu">
-              <li><a href="#">GPEPS</a></li>
-              <li><a href="#">Funcionalidade Humana</a></li>
-              <li><a href="#">GPAI/UFS</a></li>
-              <li><a href="#">Ensino e Serviço em Saúde</a></li>
-              <li><a href="#">Educação Científica</a></li>
+              <li><a href="/gpeps">GPEPS</a></li>
+              <li><a href="/funcionalidade-humana">Funcionalidade Humana</a></li>
+              <li><a href="/gpai">GPAI/UFS</a></li>
+              <li><a href="/ensino-servico">Ensino e Serviço em Saúde</a></li>
+              <li><a href="/educacao-cientifica">Educação Científica</a></li>
             </ul>
           </li>
         </ul>
@@ -186,6 +188,10 @@
         </tbody>
     </table>
 
+    <h3 class="mt">Distribuição do Orçamento por Tipo de Equipamento</h3>
+    <div class="chart-container">
+      <canvas id="chartEquipamentos"></canvas>
+    </div>
 
     <h3 class="mt">Orçamento por Laboratório</h3>
     <div class="cards">
@@ -195,6 +201,11 @@
       <div class="card"><h3>Ensino e Serviço em Saúde</h3><p>R$ 27.856,69 (11,15%)</p></div>
       <div class="card"><h3>GPEPS</h3><p>R$ 17.858,69 (7,15%)</p></div>
       <div class="card"><h3>Educação Científica</h3><p>R$ 41.910,24 (16,74%)</p></div>
+    </div>
+
+    <h3 class="mt">Distribuição do Orçamento por Laboratório</h3>
+    <div class="chart-container">
+      <canvas id="chartLaboratorios"></canvas>
     </div>
 
     <h3 class="mt">Divisão de Recursos por Quantidade de Pesquisas</h3>
@@ -268,6 +279,86 @@
   modal.onclick = (e) => {
     if (e.target === modal) modal.style.display = "none";
   };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  /* ===============================
+     Gráfico 1 – Orçamento por Equipamento
+  =============================== */
+  const ctxEquip = document.getElementById('chartEquipamentos');
+
+  new Chart(ctxEquip, {
+    type: 'pie',
+    data: {
+      labels: [
+        'Servidor + Rack',
+        'Switches',
+        'Nobreaks',
+        'Access Points',
+        'Cabeamento',
+        'Ar-condicionado',
+        'Desktops',
+        'Injetores PoE'
+      ],
+      datasets: [{
+        data: [32.01, 15.35, 1.19, 3.40, 0.38, 16.00, 31.43, 0.24],
+        backgroundColor: [
+          '#1b5e20',
+          '#2e7d32',
+          '#388e3c',
+          '#43a047',
+          '#66bb6a',
+          '#81c784',
+          '#a5d6a7',
+          '#c8e6c9'
+        ]
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }
+  });
+
+  /* ===============================
+     Gráfico 2 – Orçamento por Laboratório
+  =============================== */
+  const ctxLab = document.getElementById('chartLaboratorios');
+
+  new Chart(ctxLab, {
+    type: 'pie',
+    data: {
+      labels: [
+        'Recursos Compartilhados',
+        'Funcionalidade Humana',
+        'GPAI/UFS',
+        'Ensino e Serviço em Saúde',
+        'GPEPS',
+        'Educação Científica'
+      ],
+      datasets: [{
+        data: [39.25, 20.50, 5.21, 11.15, 7.15, 16.74],
+        backgroundColor: [
+          '#004d40',
+          '#00695c',
+          '#00796b',
+          '#00897b',
+          '#26a69a',
+          '#4db6ac'
+        ]
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
+      }
+    }
+  });
 </script>
 </body>
 </html>
