@@ -6,7 +6,8 @@
 Este repositório contém o site institucional (landing page) desenvolvido para o **trabalho final da disciplina Laboratório de Redes de Computadores**, cujo objetivo é simular a implantação completa de uma infraestrutura de redes para o **Centro de Ciências Biológicas e da Saúde (CCBS)** da **Universidade Federal de Sergipe (UFS)**.
 
 O projeto reproduz um cenário real de planejamento de redes, incluindo levantamento de requisitos, definição de arquitetura lógica e física, endereçamento IP, orçamento baseado em atas vigentes e conformidade com edital fictício proposto pela disciplina.
-
+---
+Endereço do site do condomínio: http://34.239.205.20/
 ---
 
 ## 🎯 Objetivo do Projeto
